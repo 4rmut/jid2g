@@ -26,6 +26,7 @@ namespace jid2g
                 string json = r.ReadToEnd();
                 countries = JArray.Parse(json).ToObject<List<Countries>>();
                 Console.WriteLine("Ülkeler json dosyasından okundu");
+
             }
             using (StreamReader r = new StreamReader(path + "states.json"))
             {
@@ -114,6 +115,7 @@ namespace jid2g
                                  subregion = c.subregion,
                                  latitude = c.latitude,
                                  longitude = c.longitude,
+                                 translations = c.translations
                              };
             File.WriteAllText(path + "newCountries.json", JsonConvert.SerializeObject(saveCountries));
             Console.WriteLine("Yeni ülkeler json dosyası oluşturuldu");
@@ -141,6 +143,7 @@ namespace jid2g
         public string native;
         public string region;
         public string subregion;
+        public Dictionary<string, object> translations;
         public string latitude;
         public string longitude;
     }
@@ -171,5 +174,9 @@ namespace jid2g
         public string latitude;
         public string longitude;
         public string wikiDataId;
+    }
+    public class Translations {
+        public string Language { get; set; }
+        public string name { get; set; }
     }
 }
