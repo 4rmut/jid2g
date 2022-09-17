@@ -59,6 +59,9 @@
     <None Include="datas\cities.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="datas\newCities.json" />
+    <None Include="datas\newCountries.json" />
+    <None Include="datas\newStates.json" />
     <None Include="datas\states.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
