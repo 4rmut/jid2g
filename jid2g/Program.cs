@@ -175,8 +175,4 @@ namespace jid2g
         public string longitude;
         public string wikiDataId;
     }
-    public class Translations {
-        public string Language { get; set; }
-        public string name { get; set; }
-    }
 }
